@@ -45,7 +45,7 @@ const SaveUrl = () => {
         const storedData = localStorage.getItem('stored');
         if(storedData) {
             data.current = JSON.parse(storedData);
-            setLoading(true);
+            if(data.current.length > 0) setLoading(true);
         }
     }, []);
 
@@ -63,7 +63,7 @@ const SaveUrl = () => {
                     </button>
                 </form>
             </div>
-            {loading ? <Detail data={data.current} /> : <h1 className={styles.noLinks}>Nothing to display📖</h1>}
+            {loading ? <Detail data={data.current} /> : null}
         </div>
     )
 };
