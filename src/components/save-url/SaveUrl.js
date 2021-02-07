@@ -29,6 +29,7 @@ const SaveUrl = () => {
             setUrl("");
             setDisabled(false);
             setSave(false);
+            window.location.reload();
         } catch (error) {
             console.error(error);
         }
