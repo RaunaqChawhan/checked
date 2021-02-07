@@ -45,7 +45,7 @@ const SaveUrl = () => {
         const storedData = localStorage.getItem('stored');
         if(storedData) {
             data.current = JSON.parse(storedData);
-            if(data.current.length > 0) setLoading(true);
+            setLoading(true);
         }
     }, []);
 
